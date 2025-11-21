@@ -21,6 +21,12 @@ importers:
 
   apps/base:
     dependencies:
+      '@element-plus/icons-vue':
+        specifier: ^2.3.2
+        version: 2.3.2(vue@3.5.24(typescript@5.9.3))
+      element-plus:
+        specifier: ^2.11.8
+        version: 2.11.8(vue@3.5.24(typescript@5.9.3))
       pinia:
         specifier: ^3.0.3
         version: 3.0.4(typescript@5.9.3)(vue@3.5.24(typescript@5.9.3))
@@ -31,6 +37,9 @@ importers:
         specifier: ^4.6.3
         version: 4.6.3(vue@3.5.24(typescript@5.9.3))
     devDependencies:
+      '@originjs/vite-plugin-federation':
+        specifier: ^1.4.1
+        version: 1.4.1
       '@tsconfig/node22':
         specifier: ^22.0.2
         version: 22.0.5
@@ -101,6 +110,9 @@ importers:
         specifier: ^4.6.3
         version: 4.6.3(vue@3.5.24(typescript@5.9.3))
     devDependencies:
+      '@originjs/vite-plugin-federation':
+        specifier: ^1.4.1
+        version: 1.4.1
       '@tsconfig/node22':
         specifier: ^22.0.2
         version: 22.0.5

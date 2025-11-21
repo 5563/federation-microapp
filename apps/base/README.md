@@ -1,6 +1,137 @@
-# base
+# 后台管理系统
 
-This template should help get you started developing with Vue 3 in Vite.
+这是一个基于 Vue 3 + TypeScript + Element Plus 构建的现代化后台管理系统模板。
+
+## 功能特性
+
+- ✅ 用户登录/登出功能
+- ✅ 响应式后台管理布局
+- ✅ 左侧可折叠菜单
+- ✅ 仪表盘数据展示
+- ✅ 用户管理模块
+- ✅ 路由权限控制
+- ✅ 状态管理 (Pinia)
+- ✅ 现代化 UI 设计
+
+## 技术栈
+
+- **前端框架**: Vue 3.5+
+- **开发语言**: TypeScript
+- **UI 组件库**: Element Plus
+- **状态管理**: Pinia
+- **路由管理**: Vue Router 4
+- **构建工具**: Vite
+- **代码规范**: ESLint + Prettier
+
+## 项目结构
+
+```
+src/
+├── components/           # 公共组件
+│   └── Layout/          # 布局组件
+│       └── AdminLayout.vue  # 后台管理布局
+├── views/               # 页面组件
+│   ├── DashboardView.vue    # 仪表盘
+│   ├── LoginView.vue       # 登录页面
+│   ├── user/              # 用户管理
+│   │   ├── UserListView.vue
+│   │   └── UserRoleView.vue
+│   └── system/            # 系统管理
+│       ├── SystemConfigView.vue
+│       └── SystemLogsView.vue
+├── router/              # 路由配置
+│   └── index.ts
+├── stores/              # 状态管理
+│   ├── counter.ts
+│   └── user.ts         # 用户状态
+├── App.vue             # 根组件
+└── main.ts             # 应用入口
+```
+
+## 快速开始
+
+### 环境要求
+
+- Node.js >= 20.19.0 或 >= 22.12.0
+- pnpm
+
+### 安装依赖
+
+```sh
+pnpm install
+```
+
+### 开发模式
+
+```sh
+pnpm dev
+```
+
+应用将运行在 http://localhost:2000/
+
+### 生产构建
+
+```sh
+pnpm build
+```
+
+### 类型检查
+
+```sh
+pnpm type-check
+```
+
+### 代码检查
+
+```sh
+pnpm lint
+```
+
+### 代码格式化
+
+```sh
+pnpm format
+```
+
+## 默认账号
+
+- **用户名**: admin
+- **密码**: 123456
+
+## 功能说明
+
+### 登录功能
+- 简洁的登录界面
+- 表单验证
+- 登录状态保持 (localStorage)
+- 路由权限控制
+
+### 后台管理布局
+- 左侧可折叠菜单
+- 顶部用户信息显示
+- 面包屑导航
+- 响应式设计
+
+### 页面功能
+- **仪表盘**: 数据统计、图表占位、系统状态、最近活动
+- **用户管理**: 用户列表、搜索、分页、状态切换
+- **系统管理**: 配置管理、操作日志（占位页面）
+
+## 开发说明
+
+### 状态管理
+使用 Pinia 进行状态管理，用户信息存储在 `stores/user.ts` 中。
+
+### 路由守卫
+实现了完整的路由守卫，未登录用户自动跳转到登录页，已登录用户访问登录页自动跳转到首页。
+
+### 组件库
+使用 Element Plus 作为 UI 组件库，包含丰富的组件和主题定制。
+
+### 样式规范
+- 使用 SCSS 预处理器
+- 统一的颜色变量和间距规范
+- 响应式设计
 
 ## Recommended IDE Setup
 

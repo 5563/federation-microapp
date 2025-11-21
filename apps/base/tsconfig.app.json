@@ -6,7 +6,8 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+       "remote-business/*": ["../运营管理/src/*"]
     }
   }
 }
