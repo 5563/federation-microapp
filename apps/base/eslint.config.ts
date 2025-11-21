@@ -20,8 +20,15 @@ export default defineConfigWithVueTs(
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
 
   pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommended,
-  
+  {
+    ...vueTsConfigs.recommended,
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+
   {
     ...pluginCypress.configs.recommended,
     files: [
