@@ -4,6 +4,7 @@ import { useUserStore } from '@/stores/user'
 //   console.log('=======', name)
 //   return import(`remote-business/${name}`)
 // }
+const tempData = 'CarManage'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -50,12 +51,12 @@ const router = createRouter({
         {
           path: '/CarManage/CarManage',
           name: 'CarManage',
-          component: () => import('../../../运营管理/src/views/CarManage/CarManage.vue')
+          component:() => import(`remote-business/${tempData}`)
         },
         {
           path: '/CarManage/CarDetail',
           name: 'CarDetail',
-          component: () => import('remote-business/CarDetail')
+          component:  () => import('remote-business/CarDetail')
         },
       ]
     }

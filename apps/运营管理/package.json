@@ -7,9 +7,10 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"pnpm build:watch\" \"pnpm preview\"",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
+    "build:watch": "vite build --watch",
+    "preview": "vite preview --port 20001",
     "prepare": "cypress install",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
@@ -34,6 +35,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
+    "concurrently": "^9.2.1",
     "cypress": "^15.5.0",
     "eslint": "^9.37.0",
     "eslint-plugin-cypress": "^5.2.0",

@@ -3,7 +3,7 @@
 <template>
   <div class="car-detail">
     <div class="car-detail-header">
-      <h2>我是详情asdfasdfasdf</h2>
+      <h2>我是详情a222aa23阿斯顿</h2>
     </div>
   </div>
 </template>
