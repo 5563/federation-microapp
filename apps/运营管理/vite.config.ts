@@ -8,6 +8,7 @@ import federation from "@originjs/vite-plugin-federation";
 import { remoteExport } from "./src/remote-export"
 // https://vite.dev/config/
 export default defineConfig({
+  // base: process.env.NODE_ENV === 'production' ? './' : '/federation-operation/',
   plugins: [
     vue(),
     vueJsx(),
@@ -47,8 +48,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
-  server: {
-    port: 2001
   }
 })

@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import federation from '@originjs/vite-plugin-federation'
 const isDev = process.env.NODE_ENV === 'development'
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? './' : '/federation-base/',
   plugins: [
     vue(),
     vueJsx(),
@@ -53,7 +54,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 2000,
+    port: 20000,
     open: true,
   },
 })

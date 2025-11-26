@@ -8,6 +8,7 @@ import federation from "@originjs/vite-plugin-federation";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? './' : '/federation-screen/',
   plugins: [
     vue(),
     vueJsx(),

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { useUserStore } from '@/stores/user'
 // function loadRemoteComponent(name: string) {
 //   console.log('=======', name)
@@ -6,7 +6,7 @@ import { useUserStore } from '@/stores/user'
 // }
 const tempData = 'CarManage'
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/login',
@@ -48,11 +48,11 @@ const router = createRouter({
           name: 'SystemLogs',
           component: () => import('@/views/system/SystemLogsView.vue')
         },
-        {
-          path: '/CarManage/CarManage',
-          name: 'CarManage',
-          component:() => import(`remote-business/${tempData}`)
-        },
+        // {
+        //   path: '/CarManage/CarManage',
+        //   name: 'CarManage',
+        //   component:() => import(`remote-business/${tempData}`)
+        // },
         {
           path: '/CarManage/CarDetail',
           name: 'CarDetail',
