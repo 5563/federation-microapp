@@ -35,7 +35,7 @@ export default defineConfig({
         if (!error) {
           try {
             // 通知 host 刷新
-            await fetch('http://localhost:2000/__fullReload');
+            await fetch('http://localhost:20000/__fullReload');
           } catch (e) {
             // host 没启动也不会报错
             console.log('[remote] 通知 host 刷新失败（可能 host 未启动）');

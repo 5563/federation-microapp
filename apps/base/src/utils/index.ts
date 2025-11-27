@@ -23,7 +23,7 @@ export const getRemoteComponent = async (options: RemoteOptions): Promise<any> =
   })
 
   // 2. 加载模块
-  const mod = await getRemote(remoteName, moduleName)
+  const mod = await getRemote(remoteName, `./${moduleName}`)
 
   // 3. 解包模块
   const Comp = await unwrap(mod)

@@ -42,14 +42,14 @@ export const getMenuList = () => {
               title:'用户列表',
               name: 'UserList',
               path: '/user/UserList',
-              component: '/user/UserList',
+              component: '/user/UserListView',
             },
             {
               id: 22,
               title:'用户角色',
               name: 'UserRole',
               path: '/user/UserRole',
-              component: '/user/UserListView',
+              component: '/user/UserRoleView',
             }
           ]
         }

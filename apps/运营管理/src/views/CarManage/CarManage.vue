@@ -1,29 +1,10 @@
 <template>
   <div>
     <el-card shadow="never">
-      <el-row>
-        <el-col :span="12">
-          <el-button type="primary">新增按钮 </el-button>
-          <el-button type="primary">删除按钮</el-button>
-          <el-button type="primary">修改按钮</el-button>
-        </el-col>
-        <el-col :span="12">
-          <el-input placeholder="请输入内容" />
-        </el-col>
-        <el-col :span="12">
-          <el-select placeholder="请选择">
-            <el-option
-              v-for="item in options"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value"
-            />
-          </el-select>
-        </el-col>
-      </el-row>
+      <h1>车辆管理</h1>
+      我的位置在运营管理项目中
+      看下我怎么更新
     </el-card>
-    <el-button @click="toDetail"> 我是跳转详情 </el-button>
-    <el-button @click="counterStore.increment"> {{ counterStore.count }} </el-button>
   </div>
 </template>
 <script setup lang="ts">
@@ -32,7 +13,7 @@ import { useCounterStore } from '@/stores/counter'
 const counterStore = useCounterStore()
 const router = useRouter()
 const toDetail = () => {
-  router.push('/carmanage/cardetail')
+  router.push('/business/CarDetail')
 }
 const options = [
   {
