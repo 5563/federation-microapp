@@ -3,15 +3,14 @@
     {{ counterStore.count }}
     <div>
       vue独立项目
-      <remoteVue />
+      ss
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, defineAsyncComponent } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useCounterStore } from '@/stores/counter'
-const remoteVue = defineAsyncComponent(() => import('remote-vue/App'))
 const counterStore = useCounterStore()
 import {
   User,

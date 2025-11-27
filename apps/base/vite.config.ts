@@ -14,8 +14,7 @@ export default defineConfig({
     vueDevTools(),
     federation({
       remotes:{
-        'remote-business': 'http://localhost:20001/assets/remoteEntry.js',
-        'remote-vue': 'http://localhost:20002/assets/remoteEntry.js',
+        "None": ""
       },
       shared: ['vue', 'pinia', 'vue-router'],
     }),

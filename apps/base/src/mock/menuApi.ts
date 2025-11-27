@@ -14,8 +14,6 @@ export const getMenuList = () => {
         {
           id: 1,
           title:'运营管理',
-          name: 'business',
-          path: '/business',
           children:[
             {
               id: 11,
@@ -38,21 +36,20 @@ export const getMenuList = () => {
         {
           id: 2,
           title:'用户管理',
-          path: '/user',
           children:[
             {
               id: 21,
               title:'用户列表',
               name: 'UserList',
               path: '/user/UserList',
-              component: 'UserList',
+              component: '/user/UserList',
             },
             {
               id: 22,
               title:'用户角色',
               name: 'UserRole',
               path: '/user/UserRole',
-              component: 'UserRole',
+              component: '/user/UserListView',
             }
           ]
         }
