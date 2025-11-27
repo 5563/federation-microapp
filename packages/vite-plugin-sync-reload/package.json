@@ -2,6 +2,7 @@
   "name": "vite-plugin-sync-reload",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

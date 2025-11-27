@@ -8,12 +8,13 @@ import {
 
 interface RemoteOptions {
   url: string
-  moduleName: string
+  moduleName: string,
+  type: 'ts' | 'component'
 }
 
 export const getRemoteComponent = async (options: RemoteOptions): Promise<any> => {
-  const { url, moduleName } = options
-
+  try {
+    const { url, moduleName, type = 'component' } = options
   const remoteName = `remote_${Math.random().toString(36).slice(2)}`
   // 1. 注册 remote 信息
   setRemote(remoteName, {
@@ -24,11 +25,15 @@ export const getRemoteComponent = async (options: RemoteOptions): Promise<any> =
 
   // 2. 加载模块
   const mod = await getRemote(remoteName, `./${moduleName}`)
-
+  console.log('======', type)
+  if(type === 'ts') return mod
   // 3. 解包模块
   const Comp = await unwrap(mod)
 
   return Comp
+  } catch (error) {
+    
+  }
 }
 
 // 使用 import.meta.glob 预加载所有 views 组件

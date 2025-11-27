@@ -27,7 +27,6 @@ export default function syncReloadPlugin(options: Options) {
     },
 
     configureServer(server: any) {
-        console.log('req-=======', server)
 
       if (role !== 'host') return;
 

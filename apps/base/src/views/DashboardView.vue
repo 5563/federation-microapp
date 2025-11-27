@@ -11,6 +11,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useCounterStore } from '@/stores/counter'
+import { getRemoteComponent } from '@/utils/index'
 const counterStore = useCounterStore()
 import {
   User,
@@ -18,7 +19,7 @@ import {
   Setting,
   TrendCharts
 } from '@element-plus/icons-vue'
-
+// console.log('util', util?.add(1, 2))
 const stats = ref([
   {
     title: '用户总数',
@@ -73,8 +74,14 @@ const recentActivities = ref([
   }
 ])
 
-onMounted(() => {
+onMounted(async () => {
   // 初始化数据
+  const util = await getRemoteComponent({
+    url: 'http://localhost:20001/assets/remoteEntry.js', 
+    moduleName: 'Util',
+    type: 'ts'
+  })
+  console.log('util', util?.add(1, 2))
 })
 </script>
 

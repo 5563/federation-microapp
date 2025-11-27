@@ -23,7 +23,6 @@ export default function syncReloadPlugin(options) {
             }
         },
         configureServer(server) {
-            console.log('req-=======', server);
             if (role !== 'host')
                 return;
             server.middlewares.use((req, res, next) => {
