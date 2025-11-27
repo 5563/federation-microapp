@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",          // 输出 JS 版本
+    "module": "ESNext",          // 使用 ES Module 语法
+    "declaration": true,         // 生成 .d.ts 类型声明
+    "declarationMap": true,      // 生成 .d.ts.map
+    "outDir": "dist",            // 输出到 dist 目录
+    "strict": true,              // 严格模式
+    "esModuleInterop": true,     // 兼容 import/export 与 require
+    "skipLibCheck": true,        // 跳过 node_modules 的检查
+    "moduleResolution": "node",  // 使用 Node.js 风格的模块解析
+    "resolveJsonModule": true,   // 允许导入 JSON 模块
+  },
+  "include": ["**/*"]        // 👈 指定要编译的目录（比如 src 下所有 ts）
+}

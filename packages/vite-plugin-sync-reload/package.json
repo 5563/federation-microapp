@@ -1,0 +1,35 @@
+{
+  "name": "vite-plugin-sync-reload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "require": "./dist/*.js"
+    }
+  },
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "dev": "tsc --noEmitOnError --watch",
+    "build": "tsc --noEmitOnError",
+    "prepare": "pnpm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "typescript": "~5.9.3"
+  }
+}
