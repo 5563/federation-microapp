@@ -9,7 +9,7 @@ import {
 interface RemoteOptions {
   url: string
   moduleName: string,
-  type: 'ts' | 'component'
+  type?: 'ts' | 'component'
 }
 
 export const getRemoteComponent = async (options: RemoteOptions): Promise<any> => {
@@ -32,7 +32,7 @@ export const getRemoteComponent = async (options: RemoteOptions): Promise<any> =
 
   return Comp
   } catch (error) {
-    
+
   }
 }
 
